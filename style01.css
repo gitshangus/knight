@@ -1,0 +1,23 @@
+h1 a{
+  text-decoration: none;
+  color black;
+}
+h1{
+  font-size: 60px; text-align: center;
+  border-bottom: 7px groove deepskyblue;
+  padding-bottom: 30px;
+  margin-bottom: 0px
+}
+#grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.subject{
+  border-right: 1px dotted gray;
+}
+.subject h3{
+  text-align: center;
+}
+#grid a{
+  text-decoration: none;
+}
