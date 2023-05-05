@@ -18,8 +18,7 @@ var category = function(){
   
   for(var i = 0; i < subs.length; i++){
     var $h3 = document.createElement('h3');
-    var $ul = document.createElement('ul');
-    var $li = document.createElement('li');
+    var $ul = document.createElement('ul');  
     var subname = Object.keys(infoproc)[i];
     subs[i].appendChild($h3);
     subs[i].appendChild($ul); 
@@ -29,9 +28,10 @@ var category = function(){
     courses.push(infoproc[subname]);
     courses.forEach((course) => { 
       console.log(course);
-      for(var i = 0; i < course.length; i++){
-        console.log(course[i]);
-        $li.innerText = course[i];
+      for(var j = 0; j < course.length; j++){
+        var $li = document.createElement('li');
+        console.log(course[j]);
+        $li.innerText = course[j];
         subsul.appendChild($li);
       }    
     });
