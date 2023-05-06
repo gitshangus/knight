@@ -8,59 +8,21 @@ var infoproc = {
 
 var category = function(){
   var subs = document.querySelectorAll('.subject');
-
-  console.log(subs);
-  console.log(Object.keys(subs)+' : '+Object.values(subs));
-  console.log(subs.length);
-  for(var i = 0; i < subs.length; i++){
-    console.log(subs[i]);
-  }
-  
   for(var i = 0; i < subs.length; i++){
     var $h3 = document.createElement('h3');
     var $ul = document.createElement('ul');  
-    var subname = Object.keys(infoproc)[i];
+    var subname = Object.keys(infoproc)[i];   
     subs[i].appendChild($h3);
     subs[i].appendChild($ul); 
     var subsul = subs[i].querySelector('ul');
     subs[i].querySelector('h3').textContent = subname;
-    var courses = [];
-    courses.push(infoproc[subname]);
-    courses.forEach((course) => { 
-      console.log(course);
-      for(var j = 0; j < course.length; j++){
-        var $li = document.createElement('li');
-        console.log(course[j]);
-        $li.innerText = course[j];
-        subsul.appendChild($li);
-      }    
-    });
+    var courses = infoproc[subname];
+    for(course of courses){
+      var $li = document.createElement('li');
+      $li.innerText = course;
+      subsul.appendChild($li);
+    }
   }
 };
 
 category();
-
-
-/*
-var category = function(){
-  var subs = document.querySelectorAll('.subject');
-  for(sub in subs){
-    var $h3 = document.createElement('h3');
-    var $ul = document.createElement('ul');
-    document.querySelector('.subject').appendChild($h3);
-    document.querySelector('.subject').appendChild($ul);
-    subs.forEach((sub, i) => {
-      var subname = Object.keys(infoproc)[i];
-      sub.textContent = subname;
-      var courses = infoproc[subname];
-      courses.forEach((course, i) => {
-        var $li = document.createElement('li');
-        sub.appendChild($li);
-        $li.textContent = courses[i];
-      });
-    });
-  }
-};
-
-category();
-*/
