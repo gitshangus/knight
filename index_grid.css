@@ -1,0 +1,13 @@
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#grid a{
+    text-decoration: none;
+}
+.subject{
+    border-right: 1px dotted gray;
+}
+.subject h3{
+    text-align: center;
+}

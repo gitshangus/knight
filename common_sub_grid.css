@@ -1,12 +1,3 @@
-h1 a{
-  text-decoration: none; color black;
-}
-h1{
-  font-size: 60px; text-align: center;
-  border-bottom: 7px groove limegreen;
-  padding-bottom: 30px;
-  margin-bottom: 0px;
-}
 #grid{
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
@@ -23,5 +14,5 @@ h1{
   padding-left: 20px;
 }
 .content{
-  border-right: 1px dotted limegreen;
+  border-right: 1px dotted;
 }
